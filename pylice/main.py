@@ -1,9 +1,15 @@
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 import argparse
 import csv
 import sys
 
-from pylice import *
+try:
+    from pylice.pylice import *
+except ImportError:
+    from pylice import *
 
 
 def get_license_info(packages=None, output_csv=False):
@@ -22,7 +28,7 @@ def get_license_info(packages=None, output_csv=False):
 
     license_info.sort(key=lambda x: x[0])
 
-    output = StringIO.StringIO()
+    output = StringIO()
     if output_csv:
         writer = csv.writer(output)
         writer.writerows([info for info in license_info])
@@ -44,7 +50,7 @@ def main():
 
     try:
         output = get_license_info(packages=args.packages, output_csv=args.output_csv)
-    except Exception, ex:
+    except Exception as ex:
         sys.stderr.write(str(ex) + "\n")
         sys.exit(1)
 

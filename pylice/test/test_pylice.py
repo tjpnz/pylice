@@ -9,7 +9,8 @@ class TestLicenseInfo(unittest.TestCase):
         self.assertRaises(Exception, get_license_info_for_distribution, "TEST")
 
         name, _license = get_license_info_for_distribution("setuptools")
-        self.assertTrue(name.startswith("setuptools"))
+        # Check for setuptools (Python 2) or distribute (Python 3)
+        self.assertTrue(name.startswith("setuptools") or name.startswith('distribute'))
         self.assertEqual(_license, "PSF or ZPL")  # Too optimistic?
 
     def test_get_license_info_for_working_set(self):
