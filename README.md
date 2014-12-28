@@ -4,6 +4,14 @@
 
 ## Installation
 
+### From PyPi
+
+```bash
+pip install pylice
+```
+
+### From source
+
 ```bash
 git clone https://github.com/tjpnz/pylice.git
 cd pylice
