@@ -47,14 +47,6 @@ Developers will sometimes be asked to produce a list of all third party librarie
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
-
 ## License
 
 Copyright © 2011–2015 Thomas Prebble. PyLice is free software, and may be redistributed under the terms specified in the [license](LICENSE).
