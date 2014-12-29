@@ -15,10 +15,9 @@ class TestMain(unittest.TestCase):
         self.assertGreater(len(output), 0)
 
     def test_get_license_for_package(self):
-        output = get_license_info(packages=["setuptools"])
-        # Check for setuptools (Python 2) or distribute (Python 3)
-        self.assertTrue(output.startswith("setuptools") or output.startswith('distribute'))
-        self.assertTrue(output.strip().endswith("PSF or ZPL"))
+        output = get_license_info(packages=["Python"])
+        self.assertTrue(output.startswith("Python"))
+        self.assertTrue(output.strip().endswith("PSF license"))
 
     def test_csv_output(self):
         output = get_license_info(output_csv=True)
