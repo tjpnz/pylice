@@ -6,10 +6,7 @@ import argparse
 import csv
 import sys
 
-try:
-    from pylice.pylice import *
-except ImportError:
-    from pylice import *
+from license import *
 
 
 def get_license_info(packages=None, output_csv=False):

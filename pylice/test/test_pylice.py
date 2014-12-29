@@ -1,6 +1,7 @@
 import unittest
 
-from pylice.pylice import *
+from pylice import get_license_info_for_distribution
+from pylice import get_license_info_for_working_set
 
 
 class TestLicenseInfo(unittest.TestCase):

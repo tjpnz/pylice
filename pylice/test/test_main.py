@@ -5,7 +5,7 @@ except ImportError:
 import csv
 import unittest
 
-from pylice.main import get_license_info
+from pylice import get_license_info
 
 
 class TestMain(unittest.TestCase):
